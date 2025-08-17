@@ -1,0 +1,14 @@
+services:
+  server:
+    build:
+      context: .
+    volumes:
+       - db_data_sqlite:/var/lib/crux
+       - custom:/crux/custom
+    environment:
+      DB_FILENAME: "/var/lib/crux/data.sqlite"
+    ports:
+      - 3000:3000
+volumes:
+  db_data_sqlite:
+  custom:
