@@ -5,43 +5,138 @@
   src: url(/fonts/nunito-variable.woff2) format('woff2');
 }
 
+/* ------------------------------------------------------------------
+   THEME VARIABLES
+   - Default theme is Deep Blue Nebula
+   - Add .theme-XYZ class to <body> to switch
+-------------------------------------------------------------------*/
 :root {
-  --bg-color: hsl(206, 12%, 95%);
-  --text-color: hsl(200, 35%, 25%);
-  --color-primary: hsl(207, 90%, 54%);
-  --outline-color: hsl(188, 100%, 54%);
-  --button-bg: linear-gradient(to right, #e0e0e0, #bdbdbd);
-  --button-bg-box-shadow-color: rgba(160, 160, 160, 0.5);
-  --button-bg-primary: linear-gradient(to right, hsl(207, 90%, 61%), hsl(218, 100%, 58%));
-  --button-bg-primary-box-shadow-color: hsla(207, 90%, 61%, 0.5);
-  --button-bg-secondary: linear-gradient(to right, hsl(262, 47%, 55%), hsl(265, 100%, 46%));
-  --button-bg-secondary-box-shadow-color: hsla(258, 58%, 42%, 0.5);
-  --button-bg-danger: linear-gradient(to right, hsl(0, 84%, 58%), hsl(0, 78%, 50%));
-  --button-bg-danger-box-shadow-color: hsla(0, 58%, 42%, 0.5);
-  --button-bg-success: linear-gradient(to right, hsl(130, 58%, 45%), hsl(130, 67%, 45%));
-  --button-bg-success-box-shadow-color: hsla(128, 80%, 48%, 0.5);
-  --button-action-shadow-color: hsla(200, 15%, 60%, 0.12);
-  --underline-color: hsl(200, 35%, 65%);
-  --secondary-text-color: hsl(200, 14%, 60%);
-  --send-icon-hover-color: hsl(262, 52%, 47%);
-  --send-spinner-icon-color: hsl(200, 15%, 70%);
-  --success-icon-color: hsl(144, 40%, 57%);
-  --error-icon-color: hsl(0, 86%, 63%);
-  --copy-icon-color: hsl(144, 40%, 57%);
-  --copy-icon-bg-color: hsl(144, 100%, 96%);
-  --copy-icon-shadow-color: hsla(200, 15%, 60%, 0.12);
-  --focus-outline-color: hsla(207, 90%, 61%, 0.5);
-  --checkbox-bg-color: hsl(262, 47%, 63%);
-  --input-shadow-color: hsla(200, 15%, 70%, 0.2);
-  --input-hover-shadow-color: hsla(200, 15%, 70%, 0.4);
-  --input-label-color: hsl(200, 35%, 25%);
-  --table-bg-color: hsl(200, 12%, 95%);
-  --table-shadow-color: hsla(200, 20%, 70%, 0.3);
-  --table-tr-border-color: hsl(200, 14%, 94%);
-  --table-tr-hover-bg-color: hsl(200, 14%, 98%);
-  --table-head-tr-border-color: hsl(200, 14%, 90%);
-  --table-status-gray-bg-color: hsl(200, 12%, 95%);
+  /* ===== BASE (Theme 1: Deep Blue Nebula) ===== */
+  --bg-color: radial-gradient(ellipse at center, #1e3c72 0%, #2a5298 35%, #0f0c29 100%);
+  --text-color: #b8c6db;
+
+  /* Core accents (kept close to your scheme) */
+  --color-primary: #BB86FC;
+  --outline-color: #03DAC6;
+  --underline-color: #BB86FC;
+
+  /* Buttons */
+  --button-bg: linear-gradient(45deg, #333, #444);
+  --button-bg-box-shadow-color: rgba(0, 0, 0, 0.4);
+  --button-bg-primary: linear-gradient(to right, #8248ff, #be74ff);
+  --button-bg-primary-box-shadow-color: rgba(187, 134, 252, 0.5);
+  --button-bg-secondary: linear-gradient(to right, #03DAC6, #018786);
+  --button-bg-secondary-box-shadow-color: rgba(3, 218, 198, 0.5);
+  --button-bg-danger: linear-gradient(to right, #cf6679, #cf6679);
+  --button-bg-danger-box-shadow-color: rgba(207, 102, 121, 0.5);
+  --button-bg-success: linear-gradient(to right, #4caf50, #81c784);
+  --button-bg-success-box-shadow-color: rgba(76, 175, 80, 0.5);
+  --button-action-shadow-color: rgba(211, 47, 47, 0.12);
+
+  /* Icons & secondary text */
+  --secondary-text-color: #9fb0c4;
+  --send-icon-hover-color: #aa77ff;
+  --send-spinner-icon-color: #c7d3e6;
+  --success-icon-color: #4caf50;
+  --error-icon-color: #cf6679;
+  --copy-icon-color: #03DAC6;
+  --copy-icon-bg-color: #1f1f1f;
+  --copy-icon-shadow-color: rgba(0, 0, 0, 0.5);
+
+  /* Inputs & focus */
+  --focus-outline-color: #03DAC6;
+  --checkbox-bg-color: #03DAC6;
+  --input-shadow-color: rgba(0, 0, 0, 0.7);
+  --input-hover-shadow-color: rgba(0, 0, 0, 0.85);
+  --input-label-color: var(--text-color);
+
+  /* Tables / cards (kept light for contrast on dark backgrounds) */
+  --table-bg-color: #1e1e1e;
+  --table-shadow-color: rgba(0, 0, 0, 0.5);
+  --table-tr-border-color: #333;
+  --table-tr-hover-bg-color: #2a2a2a;
+  --table-head-tr-border-color: #444;
+  --table-status-gray-bg-color: #2a2a2a;
+
+  /* Animations */
   --keyframe-slidey-offset: 0;
+}
+
+/* ===== THEME 2: Cyberpunk Glow (deep indigo blend) ===== */
+.theme-cyberpunk {
+  --bg-color: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  --text-color: #e2e2e2;
+  --secondary-text-color: #bdbdbd;
+  --color-primary: #b388ff;         /* soft neon purple */
+  --outline-color: #00e5ff;         /* cyan glow */
+  --underline-color: #b388ff;
+  --send-icon-hover-color: #b388ff;
+}
+
+/* ===== THEME 3: Aurora Green (cool teal gradient) ===== */
+.theme-aurora {
+  --bg-color: radial-gradient(circle at top left, #0f2027, #203a43, #2c5364);
+  --text-color: #cdeccd;
+  --secondary-text-color: #b7dfc4;
+  --color-primary: #5eead4;         /* mint-teal */
+  --outline-color: #34d399;         /* emerald */
+  --underline-color: #5eead4;
+  --send-icon-hover-color: #5eead4;
+}
+
+/* ===== THEME 4: Sunset Inferno (vibrant warm to deep) ===== */
+.theme-sunset {
+  --bg-color: linear-gradient(120deg, #ff512f 0%, #dd2476 45%, #1f1c2c 100%);
+  --text-color: #ffe6f7;
+  --secondary-text-color: #ffd0ec;
+  --color-primary: #ff8bd1;         /* hot pink accent */
+  --outline-color: #ffb86b;         /* warm amber */
+  --underline-color: #ff8bd1;
+  --send-icon-hover-color: #ff8bd1;
+}
+
+/* ===== THEME 5: Neon Matrix (black ↔ neon green pulse) ===== */
+.theme-matrix {
+  --bg-color: linear-gradient(160deg, #000000 0%, #0f9b0f 50%, #000000 100%);
+  --text-color: #bfffc1;
+  --secondary-text-color: #aaf7aa;
+  --color-primary: #7CFC84;         /* neon leaf */
+  --outline-color: #39ff14;         /* cyber green */
+  --underline-color: #7CFC84;
+  --send-icon-hover-color: #7CFC84;
+}
+
+/* ===== THEME 6: Galaxy Purple (deep cosmic) ===== */
+.theme-galaxy {
+  --bg-color: radial-gradient(circle at center, #2b0f3f 0%, #1a0b2e 60%, #000000 100%);
+  --text-color: #e6ccff;
+  --secondary-text-color: #dcbcff;
+  --color-primary: #BB86FC;
+  --outline-color: #8a63ff;
+  --underline-color: #BB86FC;
+  --send-icon-hover-color: #bfa0ff;
+}
+
+/* ===== THEME 7: Nocturne Blue (subtle cool night) ===== */
+.theme-nocturne {
+  --bg-color: linear-gradient(180deg, #0b1220 0%, #0d1b2a 50%, #091016 100%);
+  --text-color: #c7d3e6;
+  --secondary-text-color: #a7b4c9;
+  --color-primary: #80bfff;         /* sky blue */
+  --outline-color: #48d1cc;         /* teal */
+  --underline-color: #80bfff;
+  --send-icon-hover-color: #80bfff;
+}
+
+/* ===== THEME 8: Mocha Night (warm chocolatey) ===== */
+.theme-mocha {
+  --bg-color: radial-gradient(circle at 20% 20%, #2c1a14 0%, #1e1411 55%, #0f0a08 100%);
+  --text-color: #f3e5d8;
+  --secondary-text-color: #e7d5c8;
+  --color-primary: #ffb385;         /* peach */
+  --outline-color: #ffd29b;         /* warm sand */
+  --underline-color: #ffb385;
+  --send-icon-hover-color: #ffc7a1;
 }
 
 /* ANIMATIONS */
@@ -68,7 +163,7 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--bg-color);
+  background: var(--bg-color);  /* changed from background-color */
   font: 16px/1.45 'Nunito', sans-serif;
   overflow-x: hidden;
   color: var(--text-color);
@@ -1820,7 +1915,6 @@ form#change-email .spinner { display: none; }
 form#change-email.htmx-request svg { display: none; }
 form#change-email.htmx-request .spinner { display: block; }
 
-
 /* SETTINGS - DELETE ACCOUNT */
 
 #delete-account-wrapper { margin-bottom: 1.5rem; }
@@ -1839,7 +1933,7 @@ form#delete-account.htmx-request .spinner { display: block; }
   padding: 0 16px;
 }
 
-.loading-stats { 
+loading-stats { 
   width: 100%;
   flex: 1 1 0;
   margin-top: -5rem;
@@ -2230,9 +2324,6 @@ svg.map path.active { stroke: hsl(261, 46%, 50%); stroke-width: 1.5; }
   #main-table-wrapper table th select, input.table-input { height: 28px; font-size: 12px; padding: 0 1rem; }
   #main-table-wrapper table th select { background-position: right 0.7em top 50%, 0 0; }
   .search-input-wrapper button { padding: 2px; margin-right: 0.15rem; }
-  #main-table-wrapper table th input.search.admin { max-width: 150px; padding: 0 1.5rem 0 1rem; }
-  #main-table-wrapper table th select.table-input { max-width: 120px; }
-  #main-table-wrapper table th button.table { height: 28px; }
   #main-table-wrapper table th input::placeholder { font-size: 12px; }
   #main-table-wrapper table tr.controls .checkbox { font-size: 13px; }
   #main-table-wrapper table button.nav { margin-right: 0.5rem; }
