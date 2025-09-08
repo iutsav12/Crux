@@ -1,3 +1,5 @@
+<img alt="Crux Banner" src="demo/cruxLogo.png" width="800">
+
 # 🚀 Crux — Modern URL Shortener with Analytics & Admin
 
 Crux is a fast, privacy-friendly URL shortener. Create branded short links, protect them with passwords or expiry rules, and track device/location analytics — all with an admin dashboard for user and link management.
