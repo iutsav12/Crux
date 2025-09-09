@@ -1,4 +1,4 @@
-<img alt="Crux Banner" src="demo/cruxLogo.png" width="800">
+<img alt="Crux Banner" src="demo/cruxLogo.png" width="200" height="200">
 
 # 🚀 Crux — Modern URL Shortener with Analytics & Admin
 
