@@ -1,5 +1,4 @@
 const env = require("./env");
-
 const cookieParser = require("cookie-parser");
 const passport = require("passport");
 const express = require("express");
